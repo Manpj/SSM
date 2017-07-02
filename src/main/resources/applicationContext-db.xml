@@ -68,6 +68,7 @@
 	</bean>
 
 	<!-- shiro过滤器 核心 -->
+	
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<!-- Shiro的核心安全接口，这个属性是必须的 -->
 		<property name="securityManager" ref="securityManager" />

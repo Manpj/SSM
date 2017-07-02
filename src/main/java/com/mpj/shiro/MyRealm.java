@@ -2,6 +2,8 @@ package com.mpj.shiro;
 
 import java.util.Set;
 
+import javax.annotation.Resource;
+
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -18,7 +20,8 @@ import com.mpj.pojo.User;
  * hzmpj 2017年6月30日 Shiro自定义域
  */
 public class MyRealm extends AuthorizingRealm {
-
+	
+	@Resource
 	private UserDao userdao;
 
 	/**
@@ -42,7 +45,7 @@ public class MyRealm extends AuthorizingRealm {
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 		// 获取用户帐号
 		String username = token.getPrincipal().toString();
-		User user = userdao.findeUserByUsername(username);
+		User user = userdao.findUserByUsername(username);
 		if (user != null) {
 			// 将查询到的用户账户和密码存放到authenticationInfo用于后面的权限判断。第三个参数随便放
 			AuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user.getUserName(), user.getPassword(),

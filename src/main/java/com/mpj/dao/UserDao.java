@@ -11,7 +11,7 @@ public interface UserDao {
 	/**
 	 * Shiro的登录验证，通过用户名查询用户信息
 	 */
-	public User findeUserByUsername(String username);
+	public User findUserByUsername(String username);
 
 	/**
 	 * 根据帐号查询角色名称
