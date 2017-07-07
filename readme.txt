@@ -1,2 +1,1 @@
-user1 create file
-user1 add info
+user2 update.user1 add info
