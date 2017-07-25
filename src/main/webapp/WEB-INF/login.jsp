@@ -8,12 +8,12 @@
 <title>后台登录</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath}/loginAdmin.do"
+	<form action="${pageContext.request.contextPath }/loginAdmin.do"
 		method="post">
-		<input type="text" name="userName" placeholder="Username"
-			autocomplete="off" /> <input type="password" name="password"
-			placeholder="Password" oncontextmenu="return false"
-			onpaste="return false" />
+		<input type="text" name="userName" class="username"
+			placeholder="Username" autocomplete="off" /> <input type="password"
+			name="password" class="password" placeholder="Password"
+			oncontextmenu="return false" onpaste="return false" />
 		<button id="submit" type="submit">Sign in</button>
 	</form>
 </body>
